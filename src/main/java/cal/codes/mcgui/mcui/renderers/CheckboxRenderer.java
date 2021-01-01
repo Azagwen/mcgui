@@ -10,6 +10,10 @@ import me.lambdaurora.spruceui.Position;
 import me.lambdaurora.spruceui.widget.SpruceCheckboxWidget;
 
 public class CheckboxRenderer implements Renderer<UICheckbox> {
+    public static CheckboxRenderer getInstance() {
+        return new CheckboxRenderer();
+    }
+
     @Override
     public void render(UIDocument document, UICheckbox element) {
         SpruceCheckboxWidget tmp = new SpruceCheckboxWidget(

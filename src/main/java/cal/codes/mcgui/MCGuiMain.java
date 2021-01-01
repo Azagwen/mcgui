@@ -28,6 +28,11 @@ public class MCGuiMain implements ModInitializer {
                 }
                 Logger.info(String.format("Element(type=%s)@render invoked.", elm.type.toString()));
             });
+            MethodsRegistry.register("mcgui:checkbox_test", (element, document, checkboxEventArgs) -> {
+                SystemToast toast = SystemToast.create(MinecraftClient.getInstance(), SystemToast.Type.TUTORIAL_HINT,
+                        new LiteralText("Checkbox State:"), new LiteralText(checkboxEventArgs.toString()));
+                MinecraftClient.getInstance().getToastManager().add(toast);
+            });
             DocumentRegistry.register("mcgui:test_file", MCUIParser.parse(ResourceHelper.getFileFromResource("assets/mcgui/test.mcui", MCGuiMain.class), true));
         } catch (Exception e) {
             e.printStackTrace();

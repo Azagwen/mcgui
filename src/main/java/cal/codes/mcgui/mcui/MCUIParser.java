@@ -9,6 +9,7 @@ import cal.codes.mcgui.exceptions.RootElementException;
 import cal.codes.mcgui.logging.Logger;
 import cal.codes.mcgui.mcui.elements.UIDocument;
 import cal.codes.mcgui.mcui.parsers.ButtonParser;
+import cal.codes.mcgui.mcui.parsers.CheckboxParser;
 import cal.codes.mcgui.mcui.parsers.LabelParser;
 import cal.codes.mcgui.mcui.parsers.SeparatorParser;
 import net.minecraft.text.LiteralText;
@@ -71,6 +72,9 @@ public class MCUIParser {
             }
             if (element.nodeName().equals("separator")) {
                 document.addElement(SeparatorParser.getInstance().parse(element, document));
+            }
+            if (element.nodeName().equals("checkbox")) {
+                document.addElement(CheckboxParser.getInstance().parse(element, document));
             }
         }
 

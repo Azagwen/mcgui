@@ -9,6 +9,7 @@ import cal.codes.mcgui.exceptions.RegistryNotFoundException;
 import cal.codes.mcgui.logging.Logger;
 import cal.codes.mcgui.mcui.MethodsRegistry;
 import cal.codes.mcgui.mcui.renderers.ButtonRenderer;
+import cal.codes.mcgui.mcui.renderers.CheckboxRenderer;
 import cal.codes.mcgui.mcui.renderers.LabelRenderer;
 import cal.codes.mcgui.mcui.renderers.SeparatorRenderer;
 import me.lambdaurora.spruceui.Tooltip;
@@ -74,6 +75,7 @@ public class UIDocument extends SpruceScreen {
             if(element.type == UIType.LABEL) LabelRenderer.getInstance().render(this, (UILabel) element);
             if(element.type == UIType.BUTTON) ButtonRenderer.getInstance().render(this, (UIButton) element);
             if(element.type == UIType.SEPARATOR) SeparatorRenderer.getInstance().render(this, (UISeparator) element);
+            if(element.type == UIType.CHECKBOX) CheckboxRenderer.getInstance().render(this, (UICheckbox) element);
         });
         nonIDElements.forEach(element -> {
             System.out.println(element);
@@ -81,6 +83,7 @@ public class UIDocument extends SpruceScreen {
             if(element.type == UIType.LABEL) LabelRenderer.getInstance().render(this, (UILabel) element);
             if(element.type == UIType.BUTTON) ButtonRenderer.getInstance().render(this, (UIButton) element);
             if(element.type == UIType.SEPARATOR) SeparatorRenderer.getInstance().render(this, (UISeparator) element);
+            if(element.type == UIType.CHECKBOX) CheckboxRenderer.getInstance().render(this, (UICheckbox) element);
         });
     }
 
