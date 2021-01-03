@@ -5,6 +5,7 @@
 
 package cal.codes.mcgui.mixins;
 
+import cal.codes.mcgui.MCGuiMain;
 import cal.codes.mcgui.mcui.DocumentRegistry;
 import cal.codes.mcgui.mcui.elements.UIDocument;
 import me.lambdaurora.spruceui.Position;
@@ -29,12 +30,14 @@ public class TitleScreenMixin extends Screen
     @Inject(method = "init", at = @At("RETURN"))
     private void onInit(CallbackInfo ci)
     {
-        try {
-            UIDocument doc = DocumentRegistry.fetch("mcgui:test_file");
-            this.addButton(new SpruceButtonWidget(Position.of(0, 12), 150, 20, new LiteralText("SpruceUI Test Menu"),
-                    btn -> this.client.openScreen(doc)).asVanilla());
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(MCGuiMain.tests) {
+            try {
+                UIDocument doc = DocumentRegistry.fetch("mcgui:test_file");
+                this.addButton(new SpruceButtonWidget(Position.of(0, 12), 150, 20, new LiteralText("SpruceUI Test Menu"),
+                        btn -> this.client.openScreen(doc)).asVanilla());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }

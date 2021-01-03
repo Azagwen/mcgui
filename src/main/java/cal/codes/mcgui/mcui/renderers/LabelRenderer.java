@@ -18,7 +18,7 @@ public class LabelRenderer implements Renderer<UILabel> {
         tmp.setVisible(true);
 
         try {
-            MethodsRegistry.fetch(label.renderEvent).invoke(label, document, null);
+            MethodsRegistry.fetch(label.renderEvent).invoke(label, document);
         } catch (RegistryNotFoundException e) {
             e.printStackTrace();
         }

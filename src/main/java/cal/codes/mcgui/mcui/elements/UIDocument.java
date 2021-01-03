@@ -65,7 +65,7 @@ public class UIDocument extends SpruceScreen {
     protected void init() {
         super.init();
         try {
-            MethodsRegistry.fetch(renderEvent).invoke(null, this, null);
+            MethodsRegistry.fetch(renderEvent).invoke(null, this);
         } catch (RegistryNotFoundException e) {
 
         }

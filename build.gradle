@@ -39,8 +39,8 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // SpruceUI
-    modImplementation "com.github.lambdaurora:spruceui:${project.spruceui_version}"
-    api "com.github.lambdaurora:spruceui:${project.spruceui_version}"
+    modImplementation "com.github.LambdAurora:SpruceUI:1.16wip-SNAPSHOT"
+    include "com.github.LambdAurora:SpruceUI:1.16wip-SNAPSHOT"
     include "org.reflections:reflections:0.9.12"
 
     shadow ("org.aperlambda:lambdajcommon:1.8.1") {
