@@ -26,3 +26,4 @@
     * [label](/mcui/label.md)
     * [button](/mcui/button.md)
     * [separator](/mcui/separator.md)
+    * [checkbox](/mcui/checkbox.md)
