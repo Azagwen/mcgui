@@ -99,52 +99,52 @@ jar {
     from "LICENSE"
 }
 
-publishing {
-    publications {
-        publishFalsemaven(MavenPublication) {
-            artifactId = project.artifactId
-            pom {
-                name = "McGUI"
-                description = "A GUI library for fabric. Simple HTML like syntax and easy to use. "
-                url = "https://mcgui.cf"
-                licenses {
-                    license {
-                        name = "Mozilla Public License 2.0"
-                        url = "https://github.com/diabolical17/mcgui/blob/1.16/LICENSE"
-                    }
-                }
-                developers {
-                    developer {
-                        id = "calum6541"
-                        name = "calum6541/diabolical17"
-                        email = "calumproh28@gmail.com"
-                    }
-                }
-                scm {
-                    url = "https://github.com/diabolical17/mcgui"
-                }
-            }
-            artifact(remapJar) {
-                builtBy remapJar
-            }
-            artifact(sourcesJar) {
-                builtBy remapSourcesJar
-            }
-        }
-    }
-
-    repositories {
-        maven {
-            name "falsemaven"
-            url "https://maven.falseresync.ru/releases"
-            credentials {
-                InputStreamReader r = new InputStreamReader(System.in);
-                BufferedReader br = new BufferedReader(r);
-                System.out.println("Username?")
-                username = br.readLine()
-                System.out.println("Password?")
-                password = br.readLine()
-            }
-        }
-    }
-}
+//publishing {
+//    publications {
+//        publishFalsemaven(MavenPublication) {
+//            artifactId = project.artifactId
+//            pom {
+//                name = "McGUI"
+//                description = "A GUI library for fabric. Simple HTML like syntax and easy to use. "
+//                url = "https://mcgui.cf"
+//                licenses {
+//                    license {
+//                        name = "Mozilla Public License 2.0"
+//                        url = "https://github.com/diabolical17/mcgui/blob/1.16/LICENSE"
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id = "calum6541"
+//                        name = "calum6541/diabolical17"
+//                        email = "calumproh28@gmail.com"
+//                    }
+//                }
+//                scm {
+//                    url = "https://github.com/diabolical17/mcgui"
+//                }
+//            }
+//            artifact(remapJar) {
+//                builtBy remapJar
+//            }
+//            artifact(sourcesJar) {
+//                builtBy remapSourcesJar
+//            }
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            name "falsemaven"
+//            url "https://maven.falseresync.ru/releases"
+//            credentials {
+//                InputStreamReader r = new InputStreamReader(System.in);
+//                BufferedReader br = new BufferedReader(r);
+//                System.out.println("Username?")
+//                username = br.readLine()
+//                System.out.println("Password?")
+//                password = br.readLine()
+//            }
+//        }
+//    }
+//}
